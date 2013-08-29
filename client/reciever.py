@@ -14,10 +14,14 @@ def init():
 
 
 def get_message():
-    r = requests.get(server)
-    result = json.loads(r.text)
-    print result['msg']
-    get_message()
+    r = requests.get(server, timeout=3600*24)
+    try:
+        result = json.loads(r.text)
+        print result['msg']
+    except:
+        pass
+    finally:
+        get_message()
 
 
 def run():
