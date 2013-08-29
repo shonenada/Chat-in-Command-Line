@@ -1,5 +1,4 @@
 Chat-in-Command-Line
 ====================
 
-A char room system using in command line.
-
+A chat room system using in command line.
