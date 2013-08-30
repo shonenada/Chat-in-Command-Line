@@ -22,4 +22,4 @@ class HomeHandler(RequestHandler):
     def post(self):
         name = self.get_argument('name')
         msg = self.get_argument('msg')
-        msgsrv.add_message("%s say: %s" % (name, msg))
+        msgsrv.add_message("%s: %s" % (name, msg))
